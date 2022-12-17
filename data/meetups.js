@@ -27,3 +27,5 @@ const meetups = [
       "Eget dolor morbi non arcu risus. Urna cursus eget nunc scelerisque viverra mauris in. Mus mauris vitae ultricies leo integer malesuada nunc vel.",
   },
 ];
+
+export default meetups;
