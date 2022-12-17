@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.actions button {
+.actions a {
   font: inherit;
   cursor: pointer;
   color: #77002e;
@@ -38,9 +38,10 @@
   background-color: transparent;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+  text-decoration: none;
 }
 
-.actions button:hover,
-.actions button:active {
+.actions a:hover,
+.actions a:active {
   background-color: #ffe2ed;
 }
