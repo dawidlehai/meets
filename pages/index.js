@@ -10,6 +10,7 @@ export const getStaticProps = async () => {
     props: {
       meetups,
     },
+    revalidate: 3600,
   };
 };
 
