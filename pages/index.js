@@ -1,10 +1,22 @@
+import Head from "next/head";
 import { MongoClient } from "mongodb";
 import { DB_CREDENTIALS } from "../config.js";
 import MeetupList from "../components/meetups/MeetupList";
 import meetups from "../data/meetups";
 
 const HomePage = (props) => {
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <>
+      <Head>
+        <title>Meets - React, Next.js, and Remix Meetups in Your City!</title>
+        <meta
+          name="description"
+          content="A list of front- and back-end technologies meetups in your city! Made with Next.js!"
+        />
+      </Head>
+      <MeetupList meetups={props.meetups} />
+    </>
+  );
 };
 
 export const getStaticProps = async () => {
