@@ -1,11 +1,10 @@
 import { MongoClient } from "mongodb";
-import { DB_CREDENTIALS } from "../../config.js";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
 
-    const client = await MongoClient.connect(DB_CREDENTIALS);
+    const client = await MongoClient.connect(process.env.DB_CREDENTIALS);
     const db = client.db();
     const meetupsCollection = db.collection("meetups");
 

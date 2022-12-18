@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { MongoClient } from "mongodb";
-import { DB_CREDENTIALS } from "../config.js";
 import MeetupList from "../components/meetups/MeetupList";
 import meetups from "../data/meetups";
 
@@ -20,7 +19,7 @@ const HomePage = (props) => {
 };
 
 export const getStaticProps = async () => {
-  const client = await MongoClient.connect(DB_CREDENTIALS);
+  const client = await MongoClient.connect(process.env.DB_CREDENTIALS);
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
   const meetups = await meetupsCollection.find().toArray();

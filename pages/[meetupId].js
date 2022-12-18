@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { MongoClient, ObjectId } from "mongodb";
-import { DB_CREDENTIALS } from "../config.js";
 
 import MeetupDetails from "../components/meetups/MeetupDetails";
 
@@ -22,7 +21,7 @@ const MeetupDetailsPage = (props) => {
 };
 
 export const getStaticPaths = async () => {
-  const client = await MongoClient.connect(DB_CREDENTIALS);
+  const client = await MongoClient.connect(process.env.DB_CREDENTIALS);
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
   const meetups = await meetupsCollection.find({}, { _id: 1 }).toArray();
@@ -41,7 +40,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { meetupId } = context.params;
-  const client = await MongoClient.connect(DB_CREDENTIALS);
+  const client = await MongoClient.connect(process.env.DB_CREDENTIALS);
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
   const selectedMeetup = await meetupsCollection.findOne({
