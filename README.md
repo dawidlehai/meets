@@ -4,6 +4,6 @@
 
 Live preview at [dawidlehai-meets.vercel.app](https://dawidlehai-meets.vercel.app/).
 
-This project was created as a part of the [Udemy](https://www.udemy.com/ 'Udemy') course _Understanding TypeScript - 2023 Edition_ by [Maximilian Schwarzmüller](https://twitter.com/maxedapps 'Maximilian Schwarzmüller on Twitter').
+This project was created as a part of the [Udemy](https://www.udemy.com/ 'Udemy') course _React - The Complete Guide (incl Hooks, React Router, Redux)_ by [Maximilian Schwarzmüller](https://twitter.com/maxedapps 'Maximilian Schwarzmüller on Twitter').
 
-By preparing this project I learned basics about TypeScript.
+By preparing this project I learned basics about Next.js.
